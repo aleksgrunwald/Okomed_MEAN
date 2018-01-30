@@ -7,19 +7,17 @@ const bodyParser = require('body-parser')
 const favicon = require('serve-favicon')
 const path = require('path')
 
-let DBConnection = require('./models/model_messages')
+let DBConnection = require('./lib/dbConnection')
 
-// DBConnection.ola()
-DBconnection.connectToDB()
 
 class Server {
 
     constructor() {
         this.start()
         this.initExpressMiddleware()
-        // this.connectToDB()
+        this.connectToDB()
         this.initRoutes()
-    }
+}
 
     start() {
         app.listen(port, () => 
@@ -34,9 +32,9 @@ class Server {
         app.use(bodyParser.json())   
     }
 
-    // connectToDB() {
-    //     DBconnection.connectToDB()
-    // }
+    connectToDB() {
+        DBConnection.openDB()
+    }
 
     initRoutes() {
         app.get('/', (req, res) => {
