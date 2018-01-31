@@ -26,8 +26,8 @@ class Server {
     }
 
     initExpressMiddleware() {
-        app.use('/static', express.static(__dirname + '/static'))
-        app.use(favicon(__dirname + '/static/img/favicon.ico'))
+        app.use('/public', express.static(__dirname + '/public'))
+        app.use(favicon(__dirname + '/public/img/favicon.ico'))
         app.use(bodyParser.urlencoded({ extended: true }))
         app.use(bodyParser.json())   
     }
