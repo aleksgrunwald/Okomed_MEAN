@@ -1,6 +1,4 @@
 // this is API for messages. 
-// This one takes request 
-//   and then communicates with repository_messages.js
 
 const express = require('express')
 
@@ -8,23 +6,30 @@ const messageRepo = require('../lib/messages.repository')
 const sendEmailService = require('../lib/sendEmail.service')
 
 
-class ControllerMessages {
+class MessagesController {
 
     constructor(router) {
         router.post('/messages', this.saveMessage.bind(this))
     }
 
     saveMessage(req, res) {
+        sendEmailService.sendEmailToMe(req.body, (err)=> {
+            if (err) {
+                console.log ('Email is NOT sent. ' + err)
+            } else {
+                console.log('OK. Email is sent')
+            }})
+
         messageRepo.saveNewMessageToDB(req.body, (err)=> {
             if (err) {
                 console.log ('Post error in messages controller')
             } else {
-                console.log('OK; messages controller: posting to messages repository OK')
+                console.log('OK messages controller: posting to messages repository OK')
             }
         })
-        sendEmailService.sendEmailToMe(req.body);
+        res.json({ status: true, error: null });
     } 
 }
 
 
-module.exports = ControllerMessages
+module.exports = MessagesController

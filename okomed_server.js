@@ -8,7 +8,7 @@ const favicon = require('serve-favicon')
 const path = require('path')
 
 let DBConnection = require('./lib/dbConnection')
-let messageController = require('./controllers/controller_messages')
+let MessagesController = require('./controllers/controller_messages')
 
 
 class Server {
@@ -39,7 +39,7 @@ class Server {
     }
 
     initRoutes() {
-        new messageController(app)
+        new MessagesController(app)
         app.get('/', (req, res) => {
             res.sendFile(__dirname + '/public/dist/index.html')
         })
