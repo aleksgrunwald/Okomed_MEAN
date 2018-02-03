@@ -8,6 +8,7 @@ const favicon = require('serve-favicon')
 const path = require('path')
 
 let DBConnection = require('./lib/dbConnection')
+let messageController = require('./controllers/controller_messages')
 
 
 class Server {
@@ -26,7 +27,8 @@ class Server {
     }
 
     initExpressMiddleware() {
-        app.use('/public', express.static(__dirname + '/public'))
+        app.use('/img', express.static(__dirname + '/public/img'))
+        app.use('/', express.static(__dirname + '/public/dist'))
         app.use(bodyParser.urlencoded({ extended: true }))
         app.use(bodyParser.json()) 
         app.use(favicon(__dirname + '/public/img/favicon.ico'))  
@@ -37,8 +39,9 @@ class Server {
     }
 
     initRoutes() {
+        new messageController(app)
         app.get('/', (req, res) => {
-            res.send("OKOMED hey")
+            res.sendFile(__dirname + '/public/dist/index.html')
         })
     }
 }

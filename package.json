@@ -10,10 +10,12 @@
   "author": "Aleks Grunwald",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "mongodb": "^3.0.2",
     "mongoose": "^4.6.6",
+    "nodemailer": "^4.4.2",
     "serve-favicon": "^2.4.5"
   },
   "devDependencies": {

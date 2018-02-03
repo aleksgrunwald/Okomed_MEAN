@@ -428,13 +428,13 @@ var MessageService = (function () {
         // console.log(message)
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
-        return this.http.post('http://localhost:3000/messages', message, options)
+        return this.http.post('/messages', message, options)
             .map(function (response) {
             return response.json();
         }).catch(this.handlePostError);
     };
     MessageService.prototype.makeGetRequest = function () {
-        return this.http.get('http://localhost:3000/messages').
+        return this.http.get('/messages').
             map(function (response) {
             return response.json();
         }).catch(this.handleGetError);

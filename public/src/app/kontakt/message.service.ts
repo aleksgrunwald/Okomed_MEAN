@@ -14,7 +14,7 @@ export class MessageService {
         let headers = new Headers({ 'Content-Type': 'application/json' })
         let options = new RequestOptions({ headers: headers })
 
-        return this.http.post('http://localhost:3000/messages', message, options)
+        return this.http.post('/messages', message, options)
             .map((response: Response) => {
                 return response.json()
             }).catch(this.handlePostError)
@@ -22,7 +22,7 @@ export class MessageService {
 
 
     makeGetRequest(): Observable<any> {
-        return this.http.get('http://localhost:3000/messages').
+        return this.http.get('/messages').
             map((response: Response) => {
                 return response.json()
             }).catch(this.handleGetError)
