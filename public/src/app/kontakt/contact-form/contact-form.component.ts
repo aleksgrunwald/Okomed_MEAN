@@ -17,8 +17,7 @@ export class ContactFormComponent {
 
 
   sendMessage(messageForm) {
-    messageForm.date = new Date().toJSON().slice(0,10).replace(/-/g, '/')
-    messageForm.time = new Date().toJSON().slice(11, 16)
+   
     this.messageService.addNewMessageToMESSAGES(messageForm).subscribe((message) => {
       console.log('message posted')
     })

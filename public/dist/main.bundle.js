@@ -244,8 +244,6 @@ var ContactFormComponent = (function () {
         this.messageService = messageService;
     }
     ContactFormComponent.prototype.sendMessage = function (messageForm) {
-        messageForm.date = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
-        messageForm.time = new Date().toJSON().slice(11, 16);
         this.messageService.addNewMessageToMESSAGES(messageForm).subscribe(function (message) {
             console.log('message posted');
         });
