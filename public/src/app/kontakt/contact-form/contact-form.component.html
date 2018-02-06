@@ -19,9 +19,9 @@
                   data-validation-required-message="Prosimy, wpisz swoje Nazwisko.">
               </div>
               <div class="form-group">
-                <input  class="form-control" (ngModel)="email" name="email" id="email" type="email" placeholder="Twój e-mail *" 
-                  required data-validation-required-message="Prosimy, wpisz swój adres e-mail." >
-                
+                <input #emailInput class="form-control" (ngModel)="email" name="email" id="email" type="email" placeholder="Twój e-mail *" 
+                  required data-validation-required-message="Prosimy, wpisz swój adres e-mail." (blur)="validateEmail(emailInput)">
+                <div *ngIf="emailIsInvalid" class="alert alert-danger">Wpisz poprawny adres e-mail.</div>
               </div>
               <div class="form-group">
                 <input #phoneInput class="form-control" (ngModel)="phone" name="phone" id="phone" type="text" placeholder="Twój nr telefonu *"
