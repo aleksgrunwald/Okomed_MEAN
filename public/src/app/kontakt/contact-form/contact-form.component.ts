@@ -19,16 +19,7 @@ export class ContactFormComponent {
 
   validatePhone(phoneInput) {
     this.phoneRegEx = /^(\d){7,}/g
-    console.log(this.phoneRegEx.test(phoneInput.value))
-
-    // if (phoneInput.value  !== '555') {
-    //   alert('zly numer')
-    // }
-
-    // this.phoneRegEx = /\d/g
-    // if (!this.phoneRegEx.test(phoneInput.value)) {
-    //   alert('zly numer')
-    // }
+   if (!this.phoneRegEx.test(phoneInput.value)) {alert('bad nr')}
   }
 
 
