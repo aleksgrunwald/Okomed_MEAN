@@ -22,12 +22,13 @@ export class ContactFormComponent {
 
 
   validateEmail(emailInput) {
-    this.emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g
+    this.emailRegEx = /^((([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,})))$/g
+    console.log(emailInput.value)
     if (!this.emailRegEx.test(emailInput.value)) {
-      console.log('emailIsInvalid - regex nie zgodny ' + this.emailIsInvalid)
+      // console.log('emailIsInvalid - regex nie zgodny ' + this.emailIsInvalid)
       return this.emailIsInvalid = true
     } else {
-      console.log('emailIsInvalid - regex ZGODNY ' + this.emailIsInvalid)
+      // console.log('emailIsInvalid - regex ZGODNY ' + this.emailIsInvalid)
       return this.emailIsInvalid = false
     }
   }
