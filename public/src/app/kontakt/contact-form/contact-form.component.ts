@@ -19,7 +19,7 @@ export class ContactFormComponent {
   phoneIsInvalid: boolean
 
   validatePhone(phoneInput) {
-    this.phoneRegEx = /^(\d){7,}$/g
+    this.phoneRegEx = /^(\+)*(\d(\ )*(-)*)+$/g
     if (!this.phoneRegEx.test(phoneInput.value)) {
       return this.phoneIsInvalid = true
     } else {
