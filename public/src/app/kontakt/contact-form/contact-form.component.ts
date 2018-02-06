@@ -16,10 +16,15 @@ export class ContactFormComponent {
 
 
   phoneRegEx: RegExp
+  phoneIsInvalid: boolean
 
   validatePhone(phoneInput) {
-    this.phoneRegEx = /^(\d){7,}/g
-   if (!this.phoneRegEx.test(phoneInput.value)) {alert('bad nr')}
+    this.phoneRegEx = /^(\d){7,}$/g
+    if (!this.phoneRegEx.test(phoneInput.value)) {
+      return this.phoneIsInvalid = true
+    } else {
+      return this.phoneIsInvalid = false
+    }
   }
 
 
