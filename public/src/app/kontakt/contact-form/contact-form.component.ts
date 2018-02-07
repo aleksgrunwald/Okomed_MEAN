@@ -20,34 +20,57 @@ export class ContactFormComponent {
   phoneRegEx: RegExp
   phoneIsInvalid: boolean
 
+  blankPhoneAndEmailNotification: boolean
+
+
 
   validateEmail(emailInput) {
-    this.emailRegEx = /^((([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,})))$/g
-    console.log(emailInput.value)
-    if (!this.emailRegEx.test(emailInput.value)) {
-      // console.log('emailIsInvalid - regex nie zgodny ' + this.emailIsInvalid)
-      return this.emailIsInvalid = true
-    } else {
-      // console.log('emailIsInvalid - regex ZGODNY ' + this.emailIsInvalid)
+    if (emailInput.value === '') {
       return this.emailIsInvalid = false
+    } else {
+
+      this.emailRegEx = /^((([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,})))$/g
+      if (!this.emailRegEx.test(emailInput.value)) {
+        return this.emailIsInvalid = true
+      } else {
+        return this.emailIsInvalid = false
+      }
+
     }
   }
 
 
+
   validatePhone(phoneInput) {
-    this.phoneRegEx = /^(\+)*(\d(\ )*(-)*)+$/g
-    if (!this.phoneRegEx.test(phoneInput.value)) {
-      return this.phoneIsInvalid = true
-    } else {
+    if (phoneInput.value === '') {
       return this.phoneIsInvalid = false
+    } else {
+
+      this.phoneRegEx = /^(\+)*(\d(\ )*(-)*)+$/g
+      if (!this.phoneRegEx.test(phoneInput.value)) {
+        return this.phoneIsInvalid = true
+      } else {
+        return this.phoneIsInvalid = false
+      }
+
     }
+  }
+
+
+  hideBlankPhoneAndEmailNotification() {
+    return this.blankPhoneAndEmailNotification = false
   }
 
 
   sendMessage(messageForm) {
-    this.messageService.addNewMessageToMESSAGES(messageForm).subscribe((message) => {
-      console.log('message posted')
-    })
+    // console.log(messageForm)
+    if (messageForm.userInfo.phone === null || messageForm.userInfo.phone === '' && messageForm.userInfo.email === null || messageForm.userInfo.email === '') {
+      return this.blankPhoneAndEmailNotification = true
+    } else {
+      this.messageService.addNewMessageToMESSAGES(messageForm).subscribe((message) => {
+        console.log('message posted')
+      })
+    }
   }
 
 

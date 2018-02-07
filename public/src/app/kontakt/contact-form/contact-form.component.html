@@ -20,12 +20,16 @@
               </div>
               <div class="form-group">
                 <input #emailInput class="form-control" (ngModel)="email" name="email" id="email" type="email" placeholder="Twój e-mail *" 
-                  required data-validation-required-message="Prosimy, wpisz swój adres e-mail." (blur)="validateEmail(emailInput)">
+                  required data-validation-required-message="Prosimy, wpisz swój adres e-mail." 
+                  (blur)="validateEmail(emailInput)"
+                  (focus)="hideBlankPhoneAndEmailNotification(emailInput)">
                 <div *ngIf="emailIsInvalid" class="alert alert-danger">Wpisz poprawny adres e-mail.</div>
               </div>
               <div class="form-group">
                 <input #phoneInput class="form-control" (ngModel)="phone" name="phone" id="phone" type="text" placeholder="Twój nr telefonu *"
-                  required data-validation-required-message="Prosimy, wpisz swój nr telefonu." (blur)="validatePhone(phoneInput)">
+                  required data-validation-required-message="Prosimy, wpisz swój nr telefonu." 
+                  (blur)="validatePhone(phoneInput)"
+                  (focus)="hideBlankPhoneAndEmailNotification(phoneInput)">
                 <div *ngIf="phoneIsInvalid" class="alert alert-danger">Wpisz poprawny numer.</div>
               </div>
             </div>
@@ -41,6 +45,7 @@
 
             <div class="col-lg-12 text-center">
               <div id="success" class="bg-success">Wiadomość wysłana.</div>
+              <div *ngIf="blankPhoneAndEmailNotification" class="alert alert-danger">Wpisz e-mail lub numer telefonu.</div>
               <button type="submit" id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase mt-3" type="submit">Wyślij</button>
               <p><button (click)="getComments()" type="button" class="btn btn-xl text-uppercase mt-3">get console.log</button></p>
             </div>
