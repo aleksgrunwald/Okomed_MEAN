@@ -21,10 +21,14 @@ export class ContactFormComponent {
   phoneIsInvalid: boolean
 
   blankPhoneAndEmailNotification: boolean
+  blankNameAndSurnameNotification: boolean
 
+  email: string
+  phone: string
 
 
   validateEmail(emailInput) {
+    console.log(this.email)
     if (emailInput.value === '') {
       return this.emailIsInvalid = false
     } else {
@@ -63,7 +67,7 @@ export class ContactFormComponent {
 
 
   sendMessage(messageForm) {
-    // console.log(messageForm)
+    console.log(messageForm)
     if (messageForm.userInfo.phone === null || messageForm.userInfo.phone === '' && messageForm.userInfo.email === null || messageForm.userInfo.email === '') {
       return this.blankPhoneAndEmailNotification = true
     } else {
