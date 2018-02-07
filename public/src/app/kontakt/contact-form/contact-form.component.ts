@@ -45,20 +45,20 @@ export class ContactFormComponent {
 
 
 
-  validatePhone(phoneInput) {
-    if (phoneInput.value === '') {
-      return this.phoneIsInvalid = false
-    } else {
+  // validatePhone(phoneInput) {
+  //   if (phoneInput.value === '') {
+  //     return this.phoneIsInvalid = false
+  //   } else {
 
-      this.phoneRegEx = /^(\+)*(\d(\ )*(-)*)+$/g
-      if (!this.phoneRegEx.test(phoneInput.value)) {
-        return this.phoneIsInvalid = true
-      } else {
-        return this.phoneIsInvalid = false
-      }
+  //     this.phoneRegEx = /^(\+)*(\d(\ )*(-)*)+$/g
+  //     if (!this.phoneRegEx.test(phoneInput.value)) {
+  //       return this.phoneIsInvalid = true
+  //     } else {
+  //       return this.phoneIsInvalid = false
+  //     }
 
-    }
-  }
+  //   }
+  // }
 
 
   hideBlankPhoneAndEmailNotification() {
@@ -68,7 +68,7 @@ export class ContactFormComponent {
 
   sendMessage(messageForm) {
     console.log(messageForm)
-    if (messageForm.userInfo.phone === null || messageForm.userInfo.phone === '' && messageForm.userInfo.email === null || messageForm.userInfo.email === '') {
+    if (messageForm.userInfo.phone === undefined || messageForm.userInfo.phone === '' && messageForm.userInfo.email === undefined || messageForm.userInfo.email === '') {
       return this.blankPhoneAndEmailNotification = true
     } else {
       this.messageService.addNewMessageToMESSAGES(messageForm).subscribe((message) => {

@@ -28,12 +28,17 @@
                 <div *ngIf="emailIsInvalid" class="alert alert-danger">Wpisz poprawny adres e-mail.</div>
               </div>
               <div class="form-group">
+                <p>phoneInput.touched: {{ phoneInput.touched }}</p>
+                <p>phoneInput.dirty: {{ phoneInput.dirty }}</p>
+                <p>phoneInput.invalid: {{ phoneInput.invalid }}</p>
                 <input #phoneInput="ngModel" class="form-control" [(ngModel)]="phone" name="phone" id="phone" type="text" 
                   placeholder="Twój nr telefonu *" maxlength="15"
                   required data-validation-required-message="Prosimy, wpisz swój nr telefonu." 
-                  (blur)="validatePhone(phoneInput)"
+                  pattern="(\+)*(\d(\ )*(-)*)+"
                   (focus)="hideBlankPhoneAndEmailNotification(phoneInput)">
-                <div *ngIf="phoneIsInvalid" class="alert alert-danger">Wpisz poprawny numer.</div>
+                  <!--(blur)="validatePhone(phoneInput)">-->
+                
+                <div *ngIf="phoneInput.invalid && phoneInput.dirty && phone !== ''" class="alert alert-danger">Wpisz poprawny numer.</div>
               </div>
             </div>
 
