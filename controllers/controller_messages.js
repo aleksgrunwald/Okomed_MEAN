@@ -1,4 +1,5 @@
 // this is API for messages. 
+//cos tu jest cos tu jest cos tu jest
 
 const express = require('express')
 
