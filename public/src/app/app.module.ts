@@ -11,6 +11,8 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { ContactFormComponent } from './kontakt/contact-form/contact-form.component';
 import { GoogleMapComponent } from './kontakt/google-map/google-map.component';
 import { MessageService } from "./kontakt/message.service";
+import { NewsComponent } from './main-screen/news/news.component';
+import { MainScreenComponent } from './main-screen/main-screen.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MessageService } from "./kontakt/message.service";
     KontaktComponent,
     AppNavbarComponent,
     ContactFormComponent,
-    GoogleMapComponent
+    GoogleMapComponent,
+    NewsComponent,
+    MainScreenComponent
   ],
   imports: [
     BrowserModule,

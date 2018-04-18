@@ -1,0 +1,40 @@
+:host {
+    background-color: rgba(0, 0, 255, 0.089);
+    display: block;
+    height: 100vh;
+
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+.news-container {
+    position: absolute;
+    top: 18%;
+    height: 400px;
+}
+
+#news-1 {
+    background-image: url("https://www.bluecross.org.uk/sites/default/files/assets/images/124044lpr.jpg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#news-2 {
+    background-image: url("https://www.petmd.com/sites/default/files/petmd-cat-happy-13.jpg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#news-3 {
+    background-image: url("https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5Ny85NTkvb3JpZ2luYWwvc2h1dHRlcnN0b2NrXzYzOTcxNjY1LmpwZw==");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

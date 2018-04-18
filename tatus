@@ -1,0 +1,125 @@
+[33mcommit fca948b1e0f67e6867658aaa2bec47ede88c7032[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: unknown <aleks.grunwald@gmail.com>
+Date:   Tue Feb 20 16:52:02 2018 +0100
+
+    commit test from VSC
+
+[33mcommit fdd9cfb77fe410f9d2624b122c92b0f2e129900d[m
+Author: unknown <aleks.grunwald@gmail.com>
+Date:   Tue Feb 20 16:36:39 2018 +0100
+
+    test commit 20202018
+
+[33mcommit 0ff36340598b1ba47d058c1cdf3e78e83ad3366b[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Wed Feb 7 16:47:07 2018 +0100
+
+    Phone validation thru HTML pattern tag and ngModel validation properties works.
+
+[33mcommit 18bacebcc5c9fa61ac13b93dd145651ed45d2c30[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Wed Feb 7 16:13:43 2018 +0100
+
+    Two-way data binding on ngForm prooperties
+
+[33mcommit 0b0b7f481a4bbd0f795a7d3b6078b80712899ec7[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Wed Feb 7 14:06:36 2018 +0100
+
+    Cannot send the form with an empty mail and phone.
+
+[33mcommit 091c4f5516a942c11975b7c44209c7ef1cfada66[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Tue Feb 6 19:47:56 2018 +0100
+
+    emailRegEx and phoneRegEx independently work.
+
+[33mcommit a7b2f0f42a14c8725057b755baf8e1919a57041e[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Tue Feb 6 19:28:06 2018 +0100
+
+    emailRegEx is nice but space before is allowed.
+
+[33mcommit e54871627d3cdd49cb7b9fcecf2d44005aabffa1[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Tue Feb 6 19:17:15 2018 +0100
+
+    Acceptable phone RegEx
+
+[33mcommit 41b8ba55e908c1338d5a36c013110ca0320e5944[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Tue Feb 6 19:01:46 2018 +0100
+
+    Basic numberRegEx is working.
+
+[33mcommit 698a4c4e9c1dba94ae7974478597c8b612f226e2[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Tue Feb 6 13:22:34 2018 +0100
+
+    PhoneRegEx console.log when phone is not valid.
+
+[33mcommit b9040a72e839ff7e909152b6f00a643809370b99[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Tue Feb 6 13:19:04 2018 +0100
+
+    Good regex, but its not validating phone yet.
+
+[33mcommit 4ffd2ed98c62f363cf93ddefe8bc06fb7897e19c[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Tue Feb 6 11:28:35 2018 +0100
+
+    Hour in two digits.
+
+[33mcommit 91420777c73ee163070c88386c40d426c5b2a8b9[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Mon Feb 5 15:26:30 2018 +0100
+
+    Moment package was added. Time zone is not set.
+
+[33mcommit b0c15c3d84a55ab99e01d2231659e10a514f362b[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Sat Feb 3 03:00:49 2018 +0100
+
+    SenEmail.service is working. Yay!
+
+[33mcommit 0b218b1024b852f0196d212408afbecab4d73996[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Sat Feb 3 01:20:12 2018 +0100
+
+    SendEmail.service was added.
+
+[33mcommit f66aa331e8bc2cb0f58a271460f6201609079c37[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Thu Feb 1 22:23:36 2018 +0100
+
+    After gn build command
+
+[33mcommit 40f7209073ca4bc1960a101125a8fe6b9b5db5b7[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Thu Feb 1 22:02:31 2018 +0100
+
+    Before Angular build command.
+
+[33mcommit 7e66282c72dfa1388dc0f291a1e1cda4a2f580d8[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Wed Jan 31 14:10:08 2018 +0100
+
+    Before reorganizing Angular dirs.
+
+[33mcommit 6b578ed6a8cb11ee28f6fdc478786458f1794ebc[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Tue Jan 30 18:07:21 2018 +0100
+
+    DBConnection works, okomed_server works
+
+[33mcommit 566d6fc931579ac21ace829eb22ff8f70c314cae[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Tue Jan 30 02:41:00 2018 +0100
+
+    class Server. DBConnection is not defined error
+
+[33mcommit 95cdd87db63b75c0537ffbf9e0d7f251cc6fba87[m
+Author: aleksgrunwald <aleks.grunwald@gmail.com>
+Date:   Sat Jan 27 22:53:18 2018 +0100
+
+    Angular; Node - server, model_messages
