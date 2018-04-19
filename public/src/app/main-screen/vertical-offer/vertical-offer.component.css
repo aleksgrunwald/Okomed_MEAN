@@ -1,0 +1,9 @@
+:host {
+    flex: 3 3 3;
+    background-color: rgba(233, 10, 10, 0.178);
+    height: 300px;
+}
+
+.vartical-offer-container > ul {
+    list-style: none;
+}

@@ -1,4 +1,11 @@
-/* :host {
-background-color: azure;
+:host {
+    background-color: azure;
+    
 
-} */
+    display: block;
+    margin: 0 auto;
+
+    position: relative;
+    width: 960px;
+    min-height: 1px;
+  }

@@ -13,6 +13,7 @@ import { GoogleMapComponent } from './kontakt/google-map/google-map.component';
 import { MessageService } from "./kontakt/message.service";
 import { NewsComponent } from './main-screen/news/news.component';
 import { MainScreenComponent } from './main-screen/main-screen.component';
+import { VerticalOfferComponent } from './main-screen/vertical-offer/vertical-offer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MainScreenComponent } from './main-screen/main-screen.component';
     ContactFormComponent,
     GoogleMapComponent,
     NewsComponent,
-    MainScreenComponent
+    MainScreenComponent,
+    VerticalOfferComponent
   ],
   imports: [
     BrowserModule,
