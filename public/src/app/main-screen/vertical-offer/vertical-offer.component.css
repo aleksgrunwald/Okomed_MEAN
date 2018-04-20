@@ -1,9 +1,55 @@
 :host {
-    flex: 3 3 3;
-    background-color: rgba(233, 10, 10, 0.178);
+    /* background-color: rgba(233, 10, 10, 0.178); */
     height: 300px;
+
+    position: relative;
+    /* width: 100%; */
+    padding-right: 15px;
+    padding-left: 15px;
+  
+    -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+    max-width: 25%;
 }
 
-.vartical-offer-container > ul {
+
+
+
+.vertical-offer-container {
+    display: table;
+    height: 100%;
+    width: 100%;
+
+}
+
+li {
+    /* background-color: lightcoral; */
+    height: 20px;
+    text-align: right;
+}
+
+
+.vertical-offer-container > ul {
+    /* background-color: rgb(202, 200, 41); */
+    display: table-cell;
     list-style: none;
+    vertical-align: middle;
+    padding: 0;
+}
+
+
+img {
+    height: 20px;
+}
+
+
+p {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+hr {
+    background-color: black;
+    height: 2px;
+    margin: 10px auto;
 }

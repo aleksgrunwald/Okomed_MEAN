@@ -1,6 +1,19 @@
 :host {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     height: 100vh;
-    background-color: rgba(141, 80, 255, 0.411);
+    /* background-color: rgba(141, 80, 255, 0.411); */
+    
+    /* from Bootstrap grid- col-12 */
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    max-width: 100%;
 }

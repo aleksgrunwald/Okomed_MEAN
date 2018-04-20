@@ -1,23 +1,42 @@
 :host {
-    background-color: rgba(0, 255, 76, 0.349);
-    flex: 1 1 1;
-
+    /* background-color: rgba(0, 255, 76, 0.349); */
     height: 300px;
     overflow: hidden;
+
+
+    position: relative;
+    /* width: 100%; */
+    padding-right: 15px;
+    padding-left: 15px;
+  
+    -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+    max-width: 75%;
 }
 
 
+
+
 .news-container {
-    background-color: rgba(48, 47, 43, 0.459);
-    padding-left: 30px;
-    width: inherit;
-    height: inherit;
-    overflow: hidden;
+    /* background-color: rgba(48, 47, 43, 0.459); */
+}
+
+
+.news-container div {
+ position: relative;
 }
 
 
 img {
     width: inherit;
-    height: inherit;
+    position: absolute;
+}
+
+
+h2 {
+    position: absolute;
+    top: 70px;
+    right: 80px;
+    z-index: 10;
 }
 
