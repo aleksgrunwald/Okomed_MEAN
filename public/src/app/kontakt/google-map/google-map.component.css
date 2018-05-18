@@ -1,7 +1,4 @@
-#googleMap {
+#google-map_main-screen {
     overflow: hidden;
-    margin: 6rem auto;
-    width: 95%;
-    height: 450px;
     border: 0;
 }

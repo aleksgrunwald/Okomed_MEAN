@@ -1,37 +1,32 @@
 :host {
-    /* background-color: rgba(0, 255, 76, 0.349); */
+    background-color: rgba(0, 255, 76, 0.349);
     height: 300px;
     overflow: hidden;
 
 
     position: relative;
-    /* width: 100%; */
     padding-right: 15px;
     padding-left: 15px;
   
     -ms-flex: 0 0 75%;
         flex: 0 0 75%;
-    max-width: 75%;
 }
 
 
 
 
-.news-container {
-    /* background-color: rgba(48, 47, 43, 0.459); */
-}
-
+/* .news-container {
+    background-color: rgba(48, 47, 43, 0.459);
+} */
 
 .news-container div {
  position: relative;
 }
 
-
 img {
     width: inherit;
     position: absolute;
 }
-
 
 h2 {
     position: absolute;
